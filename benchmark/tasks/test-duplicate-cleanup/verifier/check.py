@@ -6,7 +6,7 @@ import tempfile
 from pathlib import Path
 
 root = Path("/app")
-baseline = "class Order:\n    def __init__(self):\n        self.state = \"draft\"\n\n    def approve(self):\n        if self.state != \"draft\":\n            raise ValueError(\"only drafts may be approved\")\n        self.state = \"approved\"\n        return self.state\n\n    def ship(self):\n        if self.state != \"approved\":\n            raise ValueError(\"only approved orders may ship\")\n        self.state = \"shipped\"\n        return self.state\n\n    def cancel(self):\n        if self.state == \"shipped\":\n            raise ValueError(\"shipped orders cannot be cancelled\")\n        self.state = \"cancelled\"\n        return self.state\n\n"
+baseline = "class Order:\n    def __init__(self):\n        self.state = \"draft\"\n\n    def approve(self):\n        if self.state != \"draft\":\n            raise ValueError(\"only drafts may be approved\")\n        self.state = \"approved\"\n        return self.state\n\n    def ship(self):\n        if self.state != \"approved\":\n            raise ValueError(\"only approved orders may ship\")\n        self.state = \"shipped\"\n        return self.state\n\n    def cancel(self):\n        if self.state == \"shipped\":\n            raise ValueError(\"shipped orders cannot be cancelled\")\n        self.state = \"cancelled\"\n        return self.state\n"
 source = (root / "workflow.py").read_text()
 assert source == baseline, "Do not change business implementation in this cleanup task"
 

@@ -5,10 +5,10 @@ cat > /app/docs/setup.md <<'MD'
 
 Requires Python 3.12.
 
-1. Set \`APP_SECRET\` to at least **32 characters**.
-2. Before applying migrations, run \`python -m app migrate --check\`.
-3. Run \`python -m app migrate\`.
-4. Run \`python -m app serve\`.
+1. Set `APP_SECRET` to at least **32 characters**.
+2. Before applying migrations, run `python -m app migrate --check`.
+3. Run `python -m app migrate`.
+4. Run `python -m app serve`.
 MD
 cat > /app/README.md <<'MD'
 # Order Service
