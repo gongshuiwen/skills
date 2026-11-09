@@ -1,0 +1,11 @@
+model = "gpt-6.1-sol"
+reasoning_effort = "high"
+repeats = 5
+concurrency = 4
+order_seed = 20261109
+
+[tasks]
+test-refactoring = "test-baseline-maintenance"
+test-duplicate-cleanup = "test-baseline-maintenance"
+docs-config-change = "documentation-baseline-maintenance"
+docs-duplicate-cleanup = "documentation-baseline-maintenance"
